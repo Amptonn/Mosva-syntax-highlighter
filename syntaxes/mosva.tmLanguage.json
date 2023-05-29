@@ -1,0 +1,109 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Mosva",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#decorators"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.mosva",
+					"match": "\\b(if|return|var)\\b"
+				},
+				{
+					"name": "keyword.decorator.mosva",
+					"match": "@\\w+"
+				},
+				{
+					"name": "keyword.operator.mosva",
+					"match": "\\b(!|==|!=|>|<)\\b"
+				},
+				{
+					"name": "keyword.operator.mosva",
+					"match": "\\b(true|false|null)\\b"
+				},
+				{
+					"name": "keyword.operator.mosva",
+					"match": "\\b(\\+|-|\\*|/|%|\\^|\\(|\\)|\\{|\\}|\\[|\\]|<|>|=|\\.|,|:|;|!|\\?|&|\\||~|@)\\b"
+				}
+			]
+		},
+		"tags": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.mosva",
+					"match": "(<\\?mosva|\\?>)"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.general.mosva",
+					"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.mosva",
+					"match": "//.*"
+				},
+				{
+					"name": "comment.block.mosva",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.mosva",
+					"match": "\\b(\\d+(\\.\\d+)?)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.mosva",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mosva",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables": {
+			"name": "variable.other.mosva",
+			"match": "\\$\\w+"
+		}
+	},
+	"scopeName": "source.mosva"
+}

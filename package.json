@@ -1,0 +1,25 @@
+{
+  "name": "mosva",
+  "displayName": "mosva",
+  "description": "Mosva Syntax Highlight",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mosva",
+      "aliases": ["Mosva", "mosva"],
+      "extensions": [".mosva"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mosva",
+      "scopeName": "source.mosva",
+      "path": "./syntaxes/mosva.tmLanguage.json"
+    }]
+  }
+}
